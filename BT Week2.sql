@@ -140,3 +140,19 @@ HAVING count(state) > 1 -- lấy điều kiện là số người ở mỗi stat
 -- 17. Select the item and price for all of the items in the items_ordered table that the price is greater than 10.00. Display the results in Ascending order based on the price.
 Select item, price from items_ordered -- chọn các trường để hiển thị
 WHERE price > 10.00 ORDER BY price ASC -- lấy điều kiện price > 10.00, sắp xếp theo thứ tự tăng dần bằng ASC
+
+--02. Select all columns from the items_ordered table for whoever purchased a Tent.
+SELECT * FROM items_ordered
+WHERE item = 'tent';
+-- Hiển thị danh sách các giá trị trong bảng items_ordered với điều kiện cột item có giá trị 'tent'
+
+--05. Select the maximum price of any item ordered in the items_ordered table. Hint: Select the maximum price only.
+SELECT max(price)
+FROM items_ordered;
+--Hiển thị giá trị lớn nhất của trường price trong bảng items_ordered
+
+--20.Select the date, item, and price from the items_ordered table for all of the rows that have a price value ranging from 10.00 to 80.00.
+SELECT order_date, item, price
+FROM items_ordered
+WHERE price BETWEEN 10.00 AND 80.00;
+--Hiển thị giá trị order_date, item, price của bảng items_ordered với điều kiện price lớn hơn hoặc bằng 10.00 đến 80.00
