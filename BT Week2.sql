@@ -1,5 +1,5 @@
-create database test
-use test
+create database Test
+use Test
 CREATE TABLE customers(
 customerid int,
 firstname varchar(255),
