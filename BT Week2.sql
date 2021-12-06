@@ -115,3 +115,15 @@ INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
 VALUES ('10410', '1999-10-28', 'Sleeping Bag', '1', '89.22');
 INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
 VALUES ('10438', '1999-11-01', 'Umbrella', '1', '6.75');
+
+-- 3. Select the customerid, order_date, and item values from the items_ordered table for any items in the item column that start with the letter "S".
+SELECT customerid, order_date, item FROM items_ordered --chọn các trường cần hiển thị
+WHERE item LIKE 'S%' -- dùng LIKE để thực hiện điều kiện 'S%' có nghĩa là chữ cái đầu tiên là S
+
+-- 10. From the items_ordered table, select the item, maximum price, and minimum price for each specific item in the table. Hint: The items will need to be broken up into separate groups
+SELECT item, max(price) MaxPrice, min(price) MinPrice FROM items_ordered -- chọn các trường hiển thị, cú pháp min max để láy giá trị lớn nhất và bé nhất
+GROUP BY item -- gộp lại dựa trên trường item
+
+-- 19. Select the item and price of all items that start with the letters 'S', 'P', or 'F'.
+SELECT item, price FROM items_ordered --chọn các trường cần hiển thị
+WHERE item LIKE '[SPF]%' -- dùng LIKE để thực hiện điều kiện '%' dùng để bắt kí tự đầu tiên, [SPF] là mảng chứa các ký tự mà ta cần bắt
