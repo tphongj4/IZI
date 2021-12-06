@@ -92,3 +92,11 @@ INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
 VALUES ('10101', '2000-3-8', 'Sleeping Bag', '2', '88.70');
 INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
 VALUES ('10101', '2000-3-8', 'Sleeping Bag', '2', '88.70');
+INSERT INTO customers(customerid, firstname, lastname, city, state)
+ VALUES ('10410', 'Mary Ann','Howell', 'Charleston','South Carolina'),
+		('10413', 'Donald','Davids','Gila Bend','Arizona'),
+		('10419', 'Linda','Sakahara','Nogales','Arizona'),
+		('10429', 'Sarah','Graham','Greensboro','North Carolina'),
+		('10438', 'Kevin','Smith','Durango','Colorado'),
+		('10439', 'Conrad','Giles','Telluride','Colorado'),
+		('10439', 'Isabela','Moore','Yuma','Arizona')
