@@ -121,9 +121,22 @@ SELECT customerid, order_date, item FROM items_ordered --chọn các trường c
 WHERE item LIKE 'S%' -- dùng LIKE để thực hiện điều kiện 'S%' có nghĩa là chữ cái đầu tiên là S
 
 -- 10. From the items_ordered table, select the item, maximum price, and minimum price for each specific item in the table. Hint: The items will need to be broken up into separate groups
-SELECT item, max(price) MaxPrice, min(price) MinPrice FROM items_ordered -- chọn các trường hiển thị, cú pháp min max để láy giá trị lớn nhất và bé nhất
+SELECT item, max(price) MaxPrice, min(price) MinPrice FROM items_ordered -- chọn các trường hiển thị, cú pháp min max để lấy giá trị lớn nhất và bé nhất
 GROUP BY item -- gộp lại dựa trên trường item
 
 -- 19. Select the item and price of all items that start with the letters 'S', 'P', or 'F'.
 SELECT item, price FROM items_ordered --chọn các trường cần hiển thị
 WHERE item LIKE '[SPF]%' -- dùng LIKE để thực hiện điều kiện '%' dùng để bắt kí tự đầu tiên, [SPF] là mảng chứa các ký tự mà ta cần bắt
+
+-- 5. Select the maximum price of any item ordered in the items_ordered table. Hint: Select the maximum price only.
+SELECT item, max(price) MaxPrice FROM items_ordered -- chọn các trường hiển thị, max để lấy giá trị lớn nhất của price
+GROUP BY item -- gộp lại dựa trên trường item
+
+-- 12. How many people are in each unique state in the customers table that have more than one person in the state? Select the state and display the number of how many people are in each if it's greater than 1.
+SELECT state, count(state) Quantity FROM customers -- chọn các trường để hiển thị
+GROUP BY state --nhóm lại thông qua trường state
+HAVING count(state) > 1 -- lấy điều kiện là số người ở mỗi state >1
+
+-- 17. Select the item and price for all of the items in the items_ordered table that the price is greater than 10.00. Display the results in Ascending order based on the price.
+Select item, price from items_ordered -- chọn các trường để hiển thị
+WHERE price > 10.00 ORDER BY price ASC -- lấy điều kiện price > 10.00, sắp xếp theo thứ tự tăng dần bằng ASC
