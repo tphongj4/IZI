@@ -99,4 +99,19 @@ INSERT INTO customers(customerid, firstname, lastname, city, state)
 		('10429', 'Sarah','Graham','Greensboro','North Carolina'),
 		('10438', 'Kevin','Smith','Durango','Colorado'),
 		('10439', 'Conrad','Giles','Telluride','Colorado'),
-		('10439', 'Isabela','Moore','Yuma','Arizona')
+		('10439', 'Isabela','Moore','Yuma','Arizona');
+
+INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
+VALUES ('10439', '1999-08-14', 'Ski Poles', '2', '25.50');
+INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
+VALUES ('10101', '1999-08-18', 'Rain Coat', '1', '18.30');
+INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
+VALUES ('10449', '1999-09-01', 'Snow Shoes', '1', '45.00');
+INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
+VALUES ('10439', '1999-09-18', 'Tent', '1', '88.00');
+INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
+VALUES ('10298', '1999-09-19', 'Lantem', '2', '29.00');
+INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
+VALUES ('10410', '1999-10-28', 'Sleeping Bag', '1', '89.22');
+INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
+VALUES ('10438', '1999-11-01', 'Umbrella', '1', '6.75');
