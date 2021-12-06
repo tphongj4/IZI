@@ -39,3 +39,25 @@ INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
 VALUES ('10298', '2000-04-01', 'Ear Muffs', 1, 12.50);
 INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
 VALUES ('10330', '2000-04-19', 'Shovel', 1, 16.75);
+
+INSERT INTO customers (customerid, firstname, lastname, city, state)
+VALUES ('10101', 'John', 'Gray', 'Lynden', 'Washington');
+INSERT INTO customers (customerid, firstname, lastname, city, state)
+VALUES ('10298', 'Leroy', 'Brown', 'Pinetop', 'Arizona');
+INSERT INTO customers (customerid, firstname, lastname, city, state)
+VALUES ('10299', 'Elroy', 'Keller', 'Snoqualmie', 'Washington');
+
+INSERT INTO customers (customerid, firstname, lastname, city, state)
+VALUES ('10315', 'Lisa', 'Jones', 'Oshkosh', 'Wisconsin');
+INSERT INTO customers (customerid, firstname, lastname, city, state)
+VALUES ('10325', 'Ginger', 'Schultz', 'Pocatello', 'Idaho');
+INSERT INTO customers (customerid, firstname, lastname, city, state)
+VALUES ('10329', 'Kelly', 'Mendoza', 'Kailua', 'Hawaii');
+INSERT INTO customers (customerid, firstname, lastname, city, state)
+VALUES ('10330', 'Shawn', 'Dalton', 'Cannon Beach', 'Oregon');
+INSERT INTO customers (customerid, firstname, lastname, city, state)
+VALUES ('10338', 'Michael', 'Howell', 'Tillamook', 'Oregon');
+INSERT INTO customers (customerid, firstname, lastname, city, state)
+VALUES ('10339', 'Anthony', 'Sanchez', 'Winslow', 'Arizona');
+INSERT INTO customers (customerid, firstname, lastname, city, state)
+VALUES ('10408', 'Elroy', 'Cleaver', 'Globe', 'Arizona');
