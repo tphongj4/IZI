@@ -75,3 +75,20 @@ INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
 VALUES ('10339', '1999-07-27', 'Umbrella', '1', '4.50');
 INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
 VALUES ('10449', '1999-08-13', 'Unicycle', '1', '180.79');
+
+INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
+VALUES ('10229', '2000-1-18', 'Inflatable Mattress', '1', '38.00');
+INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
+VALUES ('10438', '2000-1-18', 'Tent', '1', '77.99');
+INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
+VALUES ('10413', '2000-1-19', 'Lawnchair', '4', '32.00');
+INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
+VALUES ('10410', '2000-1-30', 'Unicycle', '1', '192.50');
+INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
+VALUES ('10315', '2000-2-2', 'Compass', '1', '8.00');
+INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
+VALUES ('10449', '2000-2-29', 'Flashlight', '1', '4.50');
+INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
+VALUES ('10101', '2000-3-8', 'Sleeping Bag', '2', '88.70');
+INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
+VALUES ('10101', '2000-3-8', 'Sleeping Bag', '2', '88.70');
