@@ -61,3 +61,17 @@ INSERT INTO customers (customerid, firstname, lastname, city, state)
 VALUES ('10339', 'Anthony', 'Sanchez', 'Winslow', 'Arizona');
 INSERT INTO customers (customerid, firstname, lastname, city, state)
 VALUES ('10408', 'Elroy', 'Cleaver', 'Globe', 'Arizona');
+INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
+VALUES ('10330', '1999-06-30', 'Pogo stick', '1', '28.00');
+INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
+VALUES ('10101', '1999-06-30', 'Raft', '1', '58.00');
+INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
+VALUES ('10298', '1999-07-01', 'Skateboard', '1', '33.00');
+INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
+VALUES ('10101', '1999-07-01', 'Lifr Vest', '4', '125.00');
+INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
+VALUES ('10299', '1999-07-06', 'Parachute', '1', '1250.00');
+INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
+VALUES ('10339', '1999-07-27', 'Umbrella', '1', '4.50');
+INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
+VALUES ('10449', '1999-08-13', 'Unicycle', '1', '180.79');
