@@ -205,6 +205,3 @@ Group by customerid;
 select customerid, order_date, item 
 from items_ordered
 WHERE NOT (item = 'Ear Muffs' and item = 'Snow Shoes');
-
-
---000000000000000000000000
