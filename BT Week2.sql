@@ -141,21 +141,21 @@ HAVING count(state) > 1 -- lấy điều kiện là số người ở mỗi stat
 Select item, price from items_ordered -- chọn các trường để hiển thị
 WHERE price > 10.00 ORDER BY price ASC -- lấy điều kiện price > 10.00, sắp xếp theo thứ tự tăng dần bằng ASC
 
---02. Select all columns from the items_ordered table for whoever purchased a Tent.
+--02. Select all columns from the items_ordered table for whoever purchased a Tent. (Hương)
 SELECT * FROM items_ordered
 WHERE item = 'tent';
 -- Hiển thị danh sách các giá trị trong bảng items_ordered với điều kiện cột item có giá trị 'tent'
 
---05. Select the maximum price of any item ordered in the items_ordered table. Hint: Select the maximum price only.
+--05. Select the maximum price of any item ordered in the items_ordered table. Hint: Select the maximum price only. (Hương)
 SELECT max(price)
 FROM items_ordered;
 --Hiển thị giá trị lớn nhất của trường price trong bảng items_ordered
 
---20.Select the date, item, and price from the items_ordered table for all of the rows that have a price value ranging from 10.00 to 80.00.
+--20.Select the date, item, and price from the items_ordered table for all of the rows that have a price value ranging from 10.00 to 80.00. (Hương)
 SELECT order_date, item, price
 FROM items_ordered
 WHERE price BETWEEN 10.00 AND 80.00;
---Hiển thị giá trị order_date, item, price của bảng items_ordered với điều kiện price lớn hơn hoặc bằng 10.00 đến 80.00
+--Sử dụng Where có điều kiện price có giá trị nằm trong khoảng 10.000 đến 80.000
 
 --Cau 6 (Huyền)
 SELECT AVG(price) AS AveragePrice --Hiển thị tổng trung bình cột price
