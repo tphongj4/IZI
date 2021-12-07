@@ -75,3 +75,16 @@ INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
 VALUES ('10339', '1999-07-27', 'Umbrella', '1', '4.50');
 INSERT INTO items_ordered (customerid, order_date, item, quantity, price)
 VALUES ('10449', '1999-08-13', 'Unicycle', '1', '180.79');
+
+-- 1. From the items_ordered table, select a list of all items purchased for customerid 10449. Display the customerid, item, and price for this customer.
+select customerid, item, price from items_ordered -- Chọn các trường hiển thị
+Where customerid = 10449 -- Lấy điều kiện là khách hàng có id 10449
+
+-- 8. For all of the tents that were ordered in the items_ordered table, what is the price of the lowest tent? Hint: Your query should return the price only.
+select min(price) LowestTent from items_ordered -- chọn hiển thị giá thấp nhất
+Where item = 'Tent'	-- chọn loại item là Tent
+
+-- 21. Select the firstname, city, and state from the customers table for all of the rows where the state value is either: Arizona, Washington, Oklahoma, Colorado, or Hawaii.
+Select firstname, city, state from customers -- Chọn các trường hiển thị
+where state in ('Arizona', 'Washington', 'Oklahoma', 'Colorado', 'Hawaii') -- điều kiện là state là các địa điểm trong ()
+ORDER BY state ASC -- Sắp xếp theo thứ tự A-Z dựa theo state
