@@ -156,3 +156,20 @@ SELECT order_date, item, price
 FROM items_ordered
 WHERE price BETWEEN 10.00 AND 80.00;
 --Hiển thị giá trị order_date, item, price của bảng items_ordered với điều kiện price lớn hơn hoặc bằng 10.00 đến 80.00
+
+--Cau 6 (Huyền)
+SELECT AVG(price) AS AveragePrice --Hiển thị tổng trung bình cột price
+FROM items_ordered
+WHERE MONTH(order_date)=12; --Điều kiện là tháng của order_date là 12
+--Cau 13 (Huyền)
+SELECT item, 
+max(price) AS max, --Giá tối đa lấy tên định danh cột là max
+min(price) AS min  --Giá tối thiểu lấy tên định danh cột là min 
+FROM items_ordered --Liệt kê dữ liệu từ cột item, giá tối đa, giá tối thiểu từ bảng items_ordered
+GROUP BY item --Sắp xếp theo item
+HAVING max(price) > 190.00 --Lấy những item có giá tối đa hơn > 190.00
+--Cau 16 (Huyền)
+SELECT customerid, item, price 
+FROM items_ordered --Liệt kê ra dữ liệu từ cột customerid, item với price từ bảng items_ordered
+WHERE customerid = 10449 --Điều kiện customerid phải là 10449 thì mới hiện thị kết quả
+ORDER BY price DESC; --Sắp xếp theo giá giảm dần
