@@ -193,3 +193,15 @@ select firstname, lastname, city
 from customers
 --sắp xếp theo thứ tự tăng dần dựa trên cột lastname
 order by lastname asc; 
+
+-- câu 4: hiển thị danh sách từng mục duy nhất từ ​​bảng items_ordered.
+select distinct *
+from items_ordered;
+-- câu 11: Chọn danh sách bảo quản, số lượng đơn đặt hàng họ đã thực hiện và tổng số đơn đặt hàng của từng khách hàng
+select customerid, COUNT(item) as numberoforders, sum(quantity) as thesumoforders
+from items_ordered
+Group by customerid; 
+-- câu 18: Hiển thị customerid, order_date, item ở bảng items_ordered trừ sản phẩm là Ear Muffs và Snow Shoes
+select customerid, order_date, item 
+from items_ordered
+WHERE NOT (item = 'Ear Muffs' and item = 'Snow Shoes');
