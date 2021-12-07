@@ -173,3 +173,23 @@ SELECT customerid, item, price
 FROM items_ordered --Liệt kê ra dữ liệu từ cột customerid, item với price từ bảng items_ordered
 WHERE customerid = 10449 --Điều kiện customerid phải là 10449 thì mới hiện thị kết quả
 ORDER BY price DESC; --Sắp xếp theo giá giảm dần
+
+--7.
+--đếm số hàng trong bảng items_ordered
+select count(*) from items_ordered; 
+--14.
+--hiển thị cột customerid, đếm số item khách hàng đã mua, tổng giá của số item
+SELECT customerid, COUNT(item) as item , SUM(price) as price 
+--sử dụng bảng item_ordered
+FROM items_ordered 
+-- sắp xếp theo cột customerid
+GROUP BY customerid 
+--điều kiện số item khách hàng mua phải lớn hơn 1
+having count(item)> 1; 
+--15.
+--hiển thị cột firstname, lastname, city
+select firstname, lastname, city 
+-- từ bảng customers
+from customers
+--sắp xếp theo thứ tự tăng dần dựa trên cột lastname
+order by lastname asc; 
